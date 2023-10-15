@@ -36,7 +36,7 @@ let collectionName = "users";
 app.get('/get-profile', function (req, res) {
   let response = {};
   // Connect to the db using local application or docker compose variable in connection properties
-  MongoClient.connect(mongoUrlLocal, mongoClientOptions, function (err, client) {
+  MongoClient.connect(mongoUrlDockerCompose, mongoClientOptions, function (err, client) {
     if (err) throw err;
 
     let db = client.db(databaseName);
