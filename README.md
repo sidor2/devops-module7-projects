@@ -49,33 +49,45 @@ Step 7: Access you nodejs application UI from browser
 
 </details>
 
+<details>
+<summary>Project2: Docker Compose - Run multiple Docker containers</summary>
+
+Technologies used:
+- Docker
+- MongoDB
+- MongoExpress
+
+Project Description:
+- Write Docker Compose file to run MongoDB and MongoExpress containers
 
 ### With Docker Compose
-
 #### To start the application
 
 Step 1: start mongodb and mongo-express
 
     docker-compose -f docker-compose.yaml up
-    
+
 _You can access the mongo-express under localhost:8080 from your browser_
-    
+
 Step 2: in mongo-express UI - create a new database "user-account"
 
-Step 3: in mongo-express UI - create a new collection "users" in the database "user-account"       
-    
-Step 4: start node server 
+Step 3: in mongo-express UI - create a new collection "users" in the database "user-account"
+
+Step 4: start node server
 
     cd app
     npm install
     node server.js
-    
-Step 5: access the nodejs application from browser 
+
+Step 5: access the nodejs application from browser
 
     http://localhost:3000
 
 #### To build a docker image from the application
 
     docker build -t my-app:1.0 .       
-    
+
 The dot "." at the end of the command denotes location of the Dockerfile.
+</details>
+
+
