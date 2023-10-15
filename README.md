@@ -261,3 +261,28 @@ docker push 143.110.158.5:8083/app-for-nexus:1.0
 ```
 
 </details>
+
+<details>
+<summary>Project7: Deploy Nexus as Docker container</summary>
+
+Technologies used:
+- Docker
+- Nexus
+- DigitalOcean
+- Linux
+
+Project Description
+- Create and Configure Droplet
+- Setup and run Nexus as a Docker container
+
+### follow steps
+```
+https://hub.docker.com/r/sonatype/nexus3
+```
+
+### in Droplet
+```shell
+ls /var/snap/docker/common/var-lib-docker/volumes/nexus-data/_data/
+```
+
+</details>
