@@ -90,4 +90,37 @@ Step 5: access the nodejs application from browser
 The dot "." at the end of the command denotes location of the Dockerfile.
 </details>
 
+<details>
+<summary>Project3: Dockerize Nodejs application and push to private Docker registry</summary>
 
+Technologies used:
+- Docker
+- Nodejs
+- Amazon ECR
+
+Project Requirements:
+- Write Dockerfile to build a Docker image for a Nodejs application
+- Create private Docker registry on AWS (Amazon ECR)
+- Push Docker image to this private repository
+
+Step 1: create a repository in AWS ECR.
+
+Step 2: follow the push steps from AWS ECR:
+
+Login:
+
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <account>.dkr.ecr.us-east-1.amazonaws.com
+
+Build:
+
+    docker build -t devops-module7-projects .
+
+Tag:
+
+    docker tag devops-module7-projects:latest <account>.dkr.ecr.us-east-1.amazonaws.com/devops-module7-projects:latest
+
+Push:
+
+    docker push <account>.dkr.ecr.us-east-1.amazonaws.com/devops-module7-projects:latest
+
+</details>
